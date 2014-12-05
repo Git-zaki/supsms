@@ -65,12 +65,12 @@ and open the template in the editor.
                     <form role="form" method="post">
                         
                         <div class="form-group">
-                            <label for="nom" >Nom:</label>
+                            <label for="nom" >Nom</label>
                             <input type="text" class="form-control" placeholder="Entrer votre nom"  name="firstname"/><br/>
                         </div>
                         
                         <div class="form-group">
-                            <label for="prenom">Prénom:</label>
+                            <label for="prenom">Prénom</label>
                             <input type="text" class="form-control" placeholder="Entrer votre prénom" name="lastname"/><br/>
                         </div>
                         
