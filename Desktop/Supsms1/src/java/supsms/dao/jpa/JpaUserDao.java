@@ -13,10 +13,10 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import supsms.dao.UserDao;
-import supsms.dao.entity.User;
+import supsms.dao.entity.Account;
 
 @Stateless
-public class JpaUserDao implements UserDao {
+public class JpaAccountDao implements AccountDao {
 
     @PersistenceContext
     private EntityManager em;
