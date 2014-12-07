@@ -2,11 +2,11 @@
 package supsms.dao;
 
 import javax.ejb.Local;
-import supsms.dao.entity.User;
+import supsms.dao.entity.SupUser;
 
 @Local
 public interface UserDao {
 
-    User addUser(User user);
+    SupUser addUser(SupUser user);
 
 }

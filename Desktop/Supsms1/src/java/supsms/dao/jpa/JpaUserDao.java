@@ -13,16 +13,16 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import supsms.dao.UserDao;
-import supsms.dao.entity.Account;
+import supsms.dao.entity.SupUser;
 
 @Stateless
-public class JpaAccountDao implements AccountDao {
+public class JpaUserDao implements UserDao {
 
     @PersistenceContext
     private EntityManager em;
     
     @Override
-    public User addUser(User user) {
+    public SupUser addUser(SupUser user) {
         em.persist(user);
         return user;
     }
