@@ -24,5 +24,23 @@ public class SupRole implements Serializable {
 
     @Column (name = "roleName", nullable = false)
     private String RoleName;
+
+    public Long getId_Role() {
+        return Id_Role;
+    }
+
+    public void setId_Role(Long Id_Role) {
+        this.Id_Role = Id_Role;
+    }
+
+    public String getRoleName() {
+        return RoleName;
+    }
+
+    public void setRoleName(String RoleName) {
+        this.RoleName = RoleName;
+    }
+    
+    
     
 }
