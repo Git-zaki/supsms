@@ -49,7 +49,21 @@ public class SupUser implements Serializable {
                 inverseJoinColumns=@JoinColumn(name="id_subscription"))
     private Collection<SupSubscription> supsubscription = new ArrayList<SupSubscription>();
     
-     public Collection<SupSubscription> getSupSubscription() {
+    @OneToMany
+    @JoinTable( name="USER_SMS", 
+                joinColumns=@JoinColumn(name="id_User"), 
+                inverseJoinColumns=@JoinColumn(name="id_sms"))
+    private Collection<SupSms> supms = new ArrayList<SupSms>();
+
+    public Collection<SupSms> getSupms() {
+        return supms;
+    }
+
+    public void setSupms(Collection<SupSms> supms) {
+        this.supms = supms;
+    }
+            
+    public Collection<SupSubscription> getSupSubscription() {
         return supsubscription;
     }
     public void setSupSubscription(Collection<SupSubscription> supsubscription) {
