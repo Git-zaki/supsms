@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 
 /**
@@ -14,6 +15,7 @@ import javax.persistence.Temporal;
  * @author AbdouBox
  */
 @Entity
+@Table(name="SUPSUBSCRIPTION")
 public class SupSubscription implements Serializable {
     private static final long serialVersionUID = 1L;
     

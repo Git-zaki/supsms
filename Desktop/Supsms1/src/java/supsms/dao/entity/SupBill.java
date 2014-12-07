@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 
 /**
@@ -16,6 +17,7 @@ import javax.persistence.Temporal;
  * @author AbdouBox
  */
 @Entity
+@Table(name="SUPBILL")
 public class SupBill implements Serializable {
     private static final long serialVersionUID = 1L;
     
