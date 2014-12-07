@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -26,7 +28,19 @@ public class SupRole implements Serializable {
 
     @Column (name = "roleName", nullable = false)
     private String RoleName;
+    
+    @ManyToOne
+    @JoinColumn(name ="id_User")
+    private SupUser user;
 
+    public SupUser getUser() {
+        return user;
+    }
+
+    public void setUser(SupUser user) {
+        this.user = user;
+    }
+    
     public Long getId_Role() {
         return Id_Role;
     }
