@@ -6,8 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 
 /**
  *
@@ -37,19 +35,7 @@ public class SupUser implements Serializable {
     
     @Column (name = "password", nullable = false)
     private int Password;
-    
-    @OneToOne
-    @JoinColumn(name="id_Role")
-    private SupRole suprole;
-
-    public SupRole getSuprole() {
-        return suprole;
-    }
-
-    public void setSuprole(SupRole suprole) {
-        this.suprole = suprole;
-    }
-          
+            
     public Long getId_User() {
         return Id_User;
     }
