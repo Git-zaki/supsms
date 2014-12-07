@@ -27,6 +27,27 @@ public class SupSubscription implements Serializable {
     @Column (name = "dateSubcription", nullable = false)
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date DateSubcription;
+
+    public Long getId_subscription() {
+        return Id_subscription;
+    }
+
+    public void setId_subscription(Long Id_subscription) {
+        this.Id_subscription = Id_subscription;
+    }
+
+    public Date getDateSubcription() {
+        return DateSubcription;
+    }
+
+    public void setDateSubcription(Date DateSubcription) {
+        this.DateSubcription = DateSubcription;
+    }
+
+    @Override
+    public String toString() {
+        return "SupSubscription{" + "Id_subscription=" + Id_subscription + '}';
+    }
     
     
    
