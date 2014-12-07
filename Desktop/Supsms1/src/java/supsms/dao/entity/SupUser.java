@@ -1,11 +1,16 @@
 package supsms.dao.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -37,7 +42,20 @@ public class SupUser implements Serializable {
     
     @Column (name = "password", nullable = false)
     private int Password;
-            
+    
+    @OneToMany
+    @JoinTable( name="USER_SUBSCRIPTION", 
+                joinColumns=@JoinColumn(name="id_User"), 
+                inverseJoinColumns=@JoinColumn(name="id_subscription"))
+    private Collection<SupSubscription> supsubscription = new ArrayList<SupSubscription>();
+    
+     public Collection<SupSubscription> getSupSubscription() {
+        return supsubscription;
+    }
+    public void setSupSubscription(Collection<SupSubscription> supsubscription) {
+        this.supsubscription = supsubscription;
+    }
+    
     public Long getId_User() {
         return Id_User;
     }

@@ -28,6 +28,6 @@ public class SupSubscription implements Serializable {
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date DateSubcription;
     
-    ///Id_User
+    
    
 }
