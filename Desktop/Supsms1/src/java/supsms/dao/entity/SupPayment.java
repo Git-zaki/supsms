@@ -42,8 +42,8 @@ public class SupPayment implements Serializable {
     private Date ExpiryDate;
     
     @OneToOne
-    @JoinColumn(name="id_Role")
-    private SupRole suprole;
+    @JoinColumn(name="id_User")
+    private SupUser supuser;
 
     public Long getId_Suply() {
         return Id_Suply;
@@ -93,14 +93,14 @@ public class SupPayment implements Serializable {
         this.ExpiryDate = ExpiryDate;
     }
 
-    public SupRole getSuprole() {
-        return suprole;
+    public SupUser getSupuser() {
+        return supuser;
     }
 
-    public void setSuprole(SupRole suprole) {
-        this.suprole = suprole;
+    public void setSupuser(SupUser supuser) {
+        this.supuser = supuser;
     }
-
+    
     @Override
     public String toString() {
         return "SupPayment{" + "Id_Suply=" + Id_Suply + '}';
